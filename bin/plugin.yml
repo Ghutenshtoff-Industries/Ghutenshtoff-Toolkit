@@ -1,0 +1,18 @@
+main: me.GhutenshtoffIndustries.GhutenshtoffToolkit.Main
+name: GhutenshtoffToolkit
+version: 1.1
+author: Ghutenshtoff
+description: Broadcasts messages
+commands:
+  bc:
+    description: Broadcasts a message to all players in chat
+    usage: /bc <message>
+    permission: ythentoolkit.broadcast
+  heal:
+    description: Heals the command executor
+    usage: /heal
+    permission: ythentoolkit.heal
+  feed:
+    description: Feeds the command executor
+    usage: /feed
+    permission: ythentoolkit.feed
