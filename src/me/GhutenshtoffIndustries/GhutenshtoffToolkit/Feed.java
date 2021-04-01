@@ -13,9 +13,12 @@ public class Feed implements CommandExecutor {
             if (sender.hasPermission("ythentoolkit.feed")){
             	if (sender instanceof Player) {
             		Player player = (Player) sender;
+            		player.setFoodLevel(20);
             		player.setSaturation(20);
+            		return true;
             	} else {
             		sender.sendMessage(ChatColor.RED + "Console cannot use this command");
+            		return true;
             	}
             }
         }

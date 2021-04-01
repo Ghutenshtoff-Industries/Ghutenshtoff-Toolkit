@@ -14,8 +14,10 @@ public class Heal implements CommandExecutor {
             	if (sender instanceof Player) {
             		Player player = (Player) sender;
             		player.setHealth(20);
+            		return true;
             	} else {
             		sender.sendMessage(ChatColor.RED + "Console cannot use this command");
+            		return true;
             	}
             }
         }
