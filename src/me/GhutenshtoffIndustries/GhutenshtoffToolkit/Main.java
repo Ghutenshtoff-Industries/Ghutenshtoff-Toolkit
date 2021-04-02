@@ -8,6 +8,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("bc").setExecutor(new Broadcast());
 		this.getCommand("heal").setExecutor(new Heal());
 		this.getCommand("feed").setExecutor(new Feed());
+		this.getCommand("fly").setExecutor(new Fly());
 	}
 	
 	@Override public void onDisable() {
