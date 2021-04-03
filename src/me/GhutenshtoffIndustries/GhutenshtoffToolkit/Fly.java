@@ -13,18 +13,19 @@ public class Fly implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("fly")) {
 			if (sender.hasPermission("ghutenshtofftoolkit.fly")) {
-				if (!isFrozen) {
-					isFrozen = true;
+				if (sender instanceof Player) {
 					Player player = (Player) sender;
-					player.setAllowFlight(true);
-					sender.sendMessage(ChatColor.GOLD + "On!");
-					return true;
+					if (player.getAllowFlight() == true) {
+						player.setAllowFlight(true);
+						sender.sendMessage(ChatColor.GOLD + "On!");
+						return true;
+					} else {
+						player.setAllowFlight(false);
+						sender.sendMessage(ChatColor.GOLD + "Off!");
+						return true;
+					}
 				} else {
-					isFrozen = false;
-					Player player = (Player) sender;
-					player.setAllowFlight(false);
-					sender.sendMessage(ChatColor.GOLD + "Off!");
-					return true;
+					sender.sendMessage(ChatColor.RED + "Console cannot use this command");
 				}
 			}
 			sender.sendMessage(ChatColor.RED + "You do not have permission to use this command");
