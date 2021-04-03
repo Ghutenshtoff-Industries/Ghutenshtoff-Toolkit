@@ -15,7 +15,7 @@ public class Fly implements CommandExecutor {
 			if (sender.hasPermission("ghutenshtofftoolkit.fly")) {
 				if (sender instanceof Player) {
 					Player player = (Player) sender;
-					if (player.getAllowFlight() == true) {
+					if (player.getAllowFlight() == false) {
 						player.setAllowFlight(true);
 						sender.sendMessage(ChatColor.GOLD + "On!");
 						return true;
