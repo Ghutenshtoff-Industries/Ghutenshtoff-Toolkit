@@ -10,12 +10,14 @@ public class Heal implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("heal")){
-            if (sender.hasPermission("ythentoolkit.heal")){
+            if (sender.hasPermission("ghutenshtofftoolkit.heal")){
             	if (sender instanceof Player) {
             		Player player = (Player) sender;
             		player.setHealth(20);
+            		return true;
             	} else {
             		sender.sendMessage(ChatColor.RED + "Console cannot use this command");
+            		return true;
             	}
             }
         }

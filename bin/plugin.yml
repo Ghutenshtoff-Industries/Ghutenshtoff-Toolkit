@@ -7,12 +7,16 @@ commands:
   bc:
     description: Broadcasts a message to all players in chat
     usage: /bc <message>
-    permission: ythentoolkit.broadcast
+    permission: ghutenshtofftooklit.broadcast
   heal:
     description: Heals the command executor
     usage: /heal
-    permission: ythentoolkit.heal
+    permission: ghutenshtofftooklit.heal
   feed:
     description: Feeds the command executor
     usage: /feed
-    permission: ythentoolkit.feed
+    permission: ghutenshtofftooklit.feed
+  fly:
+    description: Allows the command executor to fly
+    usage: /fly
+    permission: ghutenshtofftooklit.fly
